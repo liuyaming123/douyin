@@ -1,37 +1,15 @@
 # douyin-spider
 
-#### 介绍
-仓库用于抖音爬虫
+### 介绍
+仓库用于抖音爬虫，根据分享的用户主页链接抓取作者信息和作品列表
 
-#### 软件架构
-软件架构说明
+### 开发说明
+1.	使用抓包软件抓取抖音的请求包，获取作者信息和作品列表的接口信息
+2.	分析请求参数并模拟请求参数
+3.	使用requests包进行相关请求和响应的处理
 
+### 使用说明
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  安装依赖：`pip install -r requirements.txt`
+2.  运行：python3 douyin.py
+3.  根据需要可直接修改douyin.py中的share_url_list参数，该参数为待抓取的用户的主页分享链接列表
