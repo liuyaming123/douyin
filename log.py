@@ -3,9 +3,8 @@ import logging
 import time
 import os
 
-# 设置日志的根目录
 root_dir = os.path.dirname(os.path.abspath(__file__))
-log_dir = os.path.join(root_dir, "logs")
+log_dir = os.path.join(root_dir, "douyin_logs")
 
 if not os.path.exists(log_dir):
     os.mkdir(log_dir)
@@ -23,19 +22,25 @@ class DemoLogger():
         sh = logging.StreamHandler()
 
         # 创建处理器;sh为控制台处理器;fh为文件处理器,log_file为日志存放的文件夹
-        log_file = os.path.join(log_dir, f'{time.strftime("%Y_%m_%d", time.localtime())}.log')
+        log_file=os.path.join(log_dir,f'{time.strftime("%Y_%m_%d",time.localtime())}.log')
         # log_file = os.path.join(log_dir, "autotest.log")
         fh = logging.FileHandler(log_file, encoding='utf-8')
 
         # 创建格式器,并将sh、fh设置对应的格式
-        formator = logging.Formatter(fmt='%(asctime)s - %(filename)s - %(lineno)s - %(levelname)s - %(message)s')
+        formator = logging.Formatter(fmt = '%(asctime)s - %(filename)s - %(lineno)s - %(levelname)s - %(message)s')
         # sh.setFormatter(formator)
         fh.setFormatter(formator)
 
-        # 将处理器添加至日志器中
+        # 将处理器&#xff0c;添加至日志器中
         self.logger.addHandler(sh)
         self.logger.addHandler(fh)
 
 
 logger = DemoLogger().logger
+if __name__ == "__main__":
 
+    logger.debug("------这是debug信息------")
+    logger.info('------这是info信息------')
+    logger.warning('------这是warning信息------')
+    logger.error('------这是error信息------')
+    logger.critical('------这是critical信息------')
