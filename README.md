@@ -11,5 +11,4 @@
 ### 使用说明
 
 1.  安装依赖：`pip install -r requirements.txt`
-2.  运行：python3 douyin.py
-3.  根据需要可直接修改douyin.py中的share_url_list参数，该参数为待抓取的用户的主页分享链接列表
+2.  运行示例：python3 douyin.py https://v.douyin.com/YWdUKqk/
